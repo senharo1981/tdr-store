@@ -4,61 +4,51 @@
 @tailwind utilities;
 
 :root {
-  --emerald-600: #059669;
-  --amber-500: #f59e0b;
+  --primary: #059669;
+  --secondary: #f59e0b;
 }
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: #F8FAF9;
-  overflow-x: hidden;
+  color: #1a1a1a;
 }
 
 .font-urdu {
   font-family: 'Noto Nastaliq Urdu', serif;
-  line-height: 2.5 !important;
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #059669;
-  border-radius: 10px;
+  line-height: 2.2 !important;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-@keyframes slide-left {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
+/* Premium Card Effect */
+.product-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.animate-slide-left {
-  animation: slide-left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-@keyframes bounce-slow {
-  0%, 100% { transform: translateY(-5%); }
-  50% { transform: translateY(0); }
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
-.animate-bounce-slow {
-  animation: bounce-slow 2s infinite;
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
 }
