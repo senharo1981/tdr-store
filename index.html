@@ -15,49 +15,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
     
-    <style>
-        :root {
-            --emerald-600: #059669;
-            --amber-500: #f59e0b;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-            -webkit-tap-highlight-color: transparent;
-        }
-        .font-urdu {
-            font-family: 'Noto Nastaliq Urdu', 'Poppins', serif;
-            line-height: 2.2 !important;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        @keyframes slide-left {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-        .animate-slide-left {
-            animation: slide-left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        @keyframes bounce-slow {
-            0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
-            50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
-        }
-        .animate-bounce-slow {
-            animation: bounce-slow 2s infinite;
-        }
-        /* Mobile optimization for cards */
-        @media (max-width: 640px) {
-            .grid-cols-2 {
-                gap: 12px !important;
-            }
-        }
-    </style>
 <script type="importmap">
 {
   "imports": {
@@ -69,11 +28,9 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-[#F8FAF9] text-gray-900">
     <div id="root"></div>
     <script type="module" src="index.tsx"></script>
-<script type="module" src="/index.tsx"></script>
 </body>
 </html>
